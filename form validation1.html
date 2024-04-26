@@ -2,16 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
 </head>
 <body>
     <script>
-        function Data(){
+         function Data(){
             // fname = document.fm.fname.value;
                fname = document.getElementById('fname1').value;
-               age   = document.getElementById('age1').value;
-               console.log(fname);
+               age   = parseInt(document.getElementById('age1').value);
+               console.log(typeof(age));
+
+               if(fname=="" || fname== null){
+                alert('Fname required');
+               }
+               else if(age=="" || age==null || age<0){
+                alert('valid age required');
+               }
                document.getElementById('f').innerHTML = fname;
                document.getElementById('a').innerHTML = age;  
 
@@ -28,5 +35,7 @@
     </form>
     <input type="submit" onclick="Data()" />
      
+    </script>
+    
 </body>
 </html>
