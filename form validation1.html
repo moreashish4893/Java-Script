@@ -11,6 +11,7 @@
             // fname = document.fm.fname.value;
                fname = document.getElementById('fname1').value;
                age   = parseInt(document.getElementById('age1').value);
+               contact= document.getElementById('con').value;
                console.log(typeof(age));
 
                if(fname=="" || fname== null){
@@ -19,17 +20,34 @@
                else if(age=="" || age==null || age<0){
                 alert('valid age required');
                }
+               else if(contact.length !=10){
+                alert('length of Contact Should be 10 digits')
+               }
                document.getElementById('f').innerHTML = fname;
-               document.getElementById('a').innerHTML = age;  
+               document.getElementById('a').innerHTML = age;
+               
+               
+               function Contact(){
+                contact =document.getElementById('con').value
+                //document.getElementById('h11').innerHTML =contact
+                if(contact.length>10){
+                    alert('You can not enter number more than 10')
+                }
+               }
 
         }
     </script>
+    <!-- <h1 id="h11"></h1> -->
     <h1> firstName :<span id="f"></span></h1>
     <h1>age :<span id="a"></span></h1>
 
+
     <form name="fm">
         fname:<input type="text" name="fname" id="fname1" />
+        <br><br>
         age:<input type="number" name="age" id="age1" />
+        <br><br> 
+        contact:<input type="tel" name="cont" id="con"/>
         
 
     </form>
