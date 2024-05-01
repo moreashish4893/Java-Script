@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Menu</title>
+<style>
+  .menu {
+    display: none;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left; 
+  }
+  th {
+    background-color: #f8f66b;
+  }
+  img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+  .serial-number{
+    width:30px;
+  }
+</style>
+</head>
+<body>
+  <button id="vegBtn">Veg Menu</button>
+  <button id="nonVegBtn">Non-Veg Menu</button>
+
+  <div id="vegMenu" class="menu">
+    <h2>Veg Menu :</h2>
+    <table>
+      <tr>
+        <th class="serial-number">Serial No</th>
+        <th>Item</th>
+        <th>Half Price</th>
+        <th>Full Price</th>
+        <th>Image</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Kaju Curry</td>
+        <td> Rs.250</td>
+        <td> Rs.400</td>
+        <td><img src="Images/K-C.jpg" alt="Kaju Curry"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Paneer Tikka</td>
+        <td> Rs.270</td>
+        <td>Rs.460</td>
+        <td><img src="Images/P-T.jpg" alt="Paneer Tikka"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Veg Fried Rice</td>
+        <td>Rs.150</td>
+        <td>Rs.270</td>
+        <td><img src="Images/friedrice.jpg" alt="Veg Fried Rice"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="nonVegMenu" class="menu">
+    <h2>Non-Veg Menu :</h2>
+    <table>
+      <tr>
+        <th class="serial-number">Serial No</th>
+        <th>Item</th>
+        <th>Half Price</th>
+        <th>Full Price</th>
+        <th>Image</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Chicken Wings</td>
+        <td>Rs.300</td>
+        <td>Rs.500</td>
+        <td><img src="Images/C-W.jpg" alt="Chicken Wings"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Prawns Masala</td>
+        <td>Rs.350</td>
+        <td>Rs.600</td>
+        <td><img src="Images/Prawns.jpg" alt="Prawns Masala"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Mutton Masala</td>
+        <td>Rs.380</td>
+        <td>Rs.650</td>
+        <td><img src="Images/M-M.jpg" alt="Mutton Masala"></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    const vegBtn = document.getElementById('vegBtn');
+    const nonVegBtn = document.getElementById('nonVegBtn');
+    const vegMenu = document.getElementById('vegMenu');
+    const nonVegMenu = document.getElementById('nonVegMenu');
+
+    vegBtn.addEventListener('click', () => {
+      vegMenu.style.display = 'block';
+      nonVegMenu.style.display = 'none';
+    });
+
+    nonVegBtn.addEventListener('click', () => {
+      nonVegMenu.style.display = 'block';
+      vegMenu.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

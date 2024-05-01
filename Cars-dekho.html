@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Companies and Models</title>
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+        padding: 0;
+    }
+
+    table {
+        width: 50%;
+        border-collapse: collapse;
+        border:2px solid black;
+        margin-left: 20px;
+        margin-top: 20px;
+        
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border: 2px solid black;
+    }
+
+    th {
+        background-color:aquamarine;
+        text-align: center;
+    }
+
+    .models {
+        display: none;
+    }
+
+    .models img {
+        max-width: 100px;
+        max-height: 80px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .serial-no{
+        width:30px;
+    }
+    
+</style>
+</head>
+<body>
+
+<table id="carTable">
+    <thead>
+        <tr>
+            <th class="serial-no">Sr.NO </th>
+            <th>COMPANY NAME</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td onclick="showModels('Toyota')">Toyota</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td onclick="showModels('Hyundai')">Hyundai</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td onclick="showModels('Ford')">Ford</td>
+        </tr>
+        <!-- We can add more car companies here -->
+    </tbody>
+</table>
+
+<div id="Toyota" class="models">
+    <h2>Toyota Models</h2>
+    <img src="Images/Toyota-1.jpg" alt="Toyota 1">
+    <img src="Images/Toyota-2.jpg" alt="Toyota 2">
+    <!-- We can add more Toyota models here -->
+</div>
+
+<div id="Hyundai" class="models">
+    <h2>Hyundai Models</h2>
+    <img src="Images/Hyundai-1.jpg" alt="Hyundai 1">
+    <img src="Images/Hyundai-2.jpg" alt="Hyundai 2">
+    <!-- We can add more Honda models here -->
+</div>
+
+<div id="Ford" class="models">
+    <h2>Ford Models</h2>
+    <img src="Images/Ford-1.jpg" alt="Ford 1">
+    <img src="Images/Ford-2.jpg" alt="Ford 2">
+    <!--  We can add more Ford models here -->
+</div>
+
+<!--We can add more divs for other car companies -->
+
+<script>
+    function showModels(company) {
+        var models = document.getElementsByClassName("models");
+        for (var i = 0; i < models.length; i++) {
+            models[i].style.display = "none";
+        }
+        document.getElementById(company).style.display = "block";
+    }
+</script>
+
+</body>
+</html>
