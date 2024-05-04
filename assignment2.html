@@ -6,6 +6,29 @@
     <title>Armstrong</title>
 </head>
 <body>
+    <script>
+     function isArmstrong(n){
+        let num = n;
+        let arms = 0;
+        let sum = 0;
+        let len = num.toString().length;
+        let power;
+
+        while(num != 0){
+            arms = num % 10;
+            power = Math.pow(arms,len);
+            sum = sum + power;
+            num = parseInt(num/10);
+        }
+        if(sum == n){
+            return true;
+        }
+        else{
+            return false;
+        }
+     }  
+     console.log(isArmstrong(8208)) ;    //1634 ,9474 are armstrong numbers 
+    </script>
     
 </body>
 </html>
