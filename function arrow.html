@@ -8,17 +8,17 @@
 <body>
     <script>
 
-        var ar = () =>document.write("This is arrow function...<br>")
+        var ar = () =>document.write("This is arrow function...<br>");
         ar();
 
 
         //arrow function with default return
-        var ar1 = () =>"My name is Ashish"
+        var ar1 = () => "My name is Ashish"
         document.write(ar1() + "<br>");
 
 
         //arrow function with single para
-        var ar2 =name =>name
+        var ar2 = name => name
         document.write(ar2("Single parameter function") + "<br>");
 
 
@@ -28,7 +28,7 @@
 
 
         //arrow function with curly and return
-        ar4 = () =>{
+        var ar4 = () =>{
             return "Return and curly also works..."
         }
         document.write(ar4());

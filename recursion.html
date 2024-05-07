@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recursion</title>
 </head>
 <body>
     <script>
-        // var a=12;
-        function abc(){
-            var a=10;
-            document.write(a + "<br>");
+        function ab(n){
+            console.log(n);
+            n++;
+            if(n<=10){
+                return ab(n);
+            }
         }
-        abc();
-        document.write(a)
+        ab(1)
     </script>
     
 </body>
